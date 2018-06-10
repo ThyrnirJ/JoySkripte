@@ -1,0 +1,32 @@
+{
+    "name": "JoyClubSkript",
+    "version": "0.1",
+    "description": "Hilft beim Postfach",
+    "manifest_version": 2,
+    "icons": {
+        "16": "img/favicon.png",
+        "32": "img/favicon32.png",
+        "48": "img/favicon48.png",
+        "64": "img/favicon64.png",
+        "128": "img/favicon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "img/favicon.png",
+            "32": "img/favicon32.png",
+            "48": "img/favicon48.png",
+            "64": "img/favicon64.png",
+            "128": "img/favicon128.png"
+        },
+        "default_title": "JoyClub Mail Helper"
+    },
+    "content_scripts":[
+                       {
+                       "matches": [
+                                   "https://www.joyclub.de/clubmailv3/*"
+                                   ],
+                       "js": ["JoyMails-Helper.js"],
+                       "run_at": "document_idle"
+                       }
+                       ]
+}
